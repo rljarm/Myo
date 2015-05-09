@@ -12,10 +12,10 @@ html(lang='en', ng-app='poseidon')
     link(rel='shortcut icon', href='/favicon.ico')
   body
     include views/nav/nav
-    .container-fluid
+    .container-fluid(ng-controller='myoCtrl')
       .row
         .col-xs-12
-          div(ui-view)
+          button.btn.btn-danger(ng-show='makeFist')
 
     script(src='/vendor/jquery/dist/jquery.min.js')
     script(src='/vendor/bootstrap/dist/js/bootstrap.min.js')
@@ -25,4 +25,5 @@ html(lang='en', ng-app='poseidon')
     script(src='/vendor/angular/angular.min.js')
     script(src='/vendor/angularfire/dist/angularfire.min.js')
     script(src='/vendor/angular-ui-router/release/angular-ui-router.min.js')
+    script(src='/vendor/myo/myo.js')
     script(src=isProd ? '/index.min.js' : '/index.js')
